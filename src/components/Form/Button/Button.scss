@@ -1,0 +1,50 @@
+$blue: #0074E9;
+$white: #FFFFFF;
+$disBlue: #97AABD;
+$disWhite: #D4E0ED;
+$disGrey: #DFDFDF;
+
+.submit-button {
+  width: 342px;
+  height: 53px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+  box-shadow:
+        3px 3px 5px 1px hsl(203, 19%, 79%),
+        0 0 3px 1px hsl(202, 24%, 91%),
+        0 0 3px 1px hsl(202, 24%, 91%);
+
+  &.normal {
+    cursor: pointer;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    &.normal {
+      background-color: $blue;
+      color: $white;
+    }
+
+    &.disabled {
+      background-color: $disBlue;
+      color: $disWhite;
+    }
+  }
+
+  &.secondary{
+    &.normal {
+      background-color: $white;
+      color: $blue;
+    }
+
+    &.disabled {
+      background-color: $disGrey;
+      color: $disBlue;
+    }
+  }
+}

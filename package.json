@@ -17,7 +17,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
-    "build-and-serve": "npm run build && npm run serve"
+    "build-and-serve": "npm run build && npm run serve",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -29,6 +31,7 @@
       "jsx-a11y"
     ],
     "rules": {
+      "import/no-anonymous-default-export": "off",
       "jsx-a11y/no-noninteractive-element-interactions": [
         "error",
         {
@@ -58,6 +61,12 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/node-logger": "^6.1.21",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.1.21",
     "classnames": "^2.2.6",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "sass": "^1.32.8",
