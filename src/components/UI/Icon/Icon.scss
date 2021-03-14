@@ -1,10 +1,17 @@
+.icon {
+  width: 20px;
+}
+
 .icon-container {
   width: 45px;
   height: 50px;
   box-sizing: border-box;
-  border: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
   padding: 17px 12px;
-  margin: 0;
+}
+
+.icon-button {
+  background-color: transparent;
 
   &.hide,
   &.show {
@@ -12,9 +19,5 @@
     border: none;
     width: 44px;
     height: 48px;
-  }
-
-  .icon {
-    width: 20px;
   }
 }

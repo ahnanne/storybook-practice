@@ -26,7 +26,15 @@ export default function Icon({ shape, title, ...restProps }) {
     case 'noIcon':
       return null;
     default:
-      Comp = ShowIcon;
+      return null;
+  }
+
+  if (Comp === ShowIcon || Comp === HideIcon) {
+    return (
+      <button type="button" className={`icon-button ${shape}`}>
+        <Comp className={`icon ${shape}`} title={title} {...restProps} />
+      </button>
+    );
   }
 
   return (

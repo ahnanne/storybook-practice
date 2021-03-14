@@ -15,28 +15,16 @@ $grey: #cccccc;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
 
-  & > .input-container input[id$=Input]:focus {
-    // outline: 1px solid $grey;
-  }
-
   // hasError
   &.has-error {
     box-sizing: content-box;
     border: 1px solid red;
-
-    .input-container:focus {
-      // outline: 1px solid red;
-    }
   }
 }
 
 .input-container {
   position: relative;
   width: 296px;
-
-  &:focus {
-    outline: 1px solid $grey;
-  }
 
   input[id$=Input] {
     background-color: transparent;
@@ -48,16 +36,19 @@ $grey: #cccccc;
     padding: 14px 0 14px 14px;
     border: none;
   
-    & + .icon-container {
+    & + .icon-container,
+    & + .icon-button {
       position: absolute;
       top: 1px;
       right: 0;
+      z-index: -100;
     }
   }
 
-  & ~ .icon-container {
+  & ~ .icon-container
+  & ~ .icon-button {
     // position: absolute;
-    top: 0;
+    // top: 0;
   }
 }
 
