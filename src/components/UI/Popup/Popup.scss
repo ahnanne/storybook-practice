@@ -1,0 +1,32 @@
+$white: #ffffff;
+$bgGrey: #f4f4f4;
+
+.info-popup {
+  display: none;
+
+  &.active {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 275px;
+    height: 33px;
+    font-size: 12px;
+    letter-spacing: -1px;
+    padding: 9px 6px;
+    background-color: $bgGrey;
+    opacity: 1;
+  }
+
+  // 말풍선 화살표 모양
+  &::before {
+    position: absolute;
+    top: -7px;
+    left: 7px;
+    content: "";
+    position: absolute;
+    border-top: 0 solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid $bgGrey;
+  }
+}

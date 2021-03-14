@@ -1,4 +1,10 @@
 .autosignin-container {
+  position: relative;
   user-select: none;
   font-size: 14px;
+}
+
+.autosignin-popup {
+  top: 27px;
+  left: 0;
 }
