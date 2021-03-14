@@ -35,20 +35,12 @@ $grey: #cccccc;
     font-size: 16px;
     padding: 14px 0 14px 14px;
     border: none;
-  
-    & + .icon-container,
-    & + .icon-button {
-      position: absolute;
-      top: 1px;
-      right: 0;
-      z-index: -100;
-    }
   }
 
-  & ~ .icon-container
-  & ~ .icon-button {
-    // position: absolute;
-    // top: 0;
+  .icon-button {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
