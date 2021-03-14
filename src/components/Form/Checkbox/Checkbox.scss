@@ -14,7 +14,11 @@ $grey: #CCCCCC;
     box-shadow:
       inset 2px 2px 5px 0 $grey,
       1px 3px 5px 0 $grey;
+    white-space: nowrap;
 
+    .label-content {
+      margin-left: 30px;
+    }
   }
 
   // 체크박스 커스텀 스타일링: 체크 됐을 때
