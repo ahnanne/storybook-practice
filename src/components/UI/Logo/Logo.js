@@ -4,6 +4,7 @@ import { ReactComponent as LogoBlack } from '../../../assets/logo/black.svg';
 import { ReactComponent as LogoMono } from '../../../assets/logo/mono.svg';
 import { ReactComponent as LogoColor } from '../../../assets/logo/color.svg';
 // 리액트에서 svg는 바로 컴포넌트로 사용할 수 있음.
+import './Logo.scss';
 
 export default function Logo({ type, ...restProps }) {
   /*

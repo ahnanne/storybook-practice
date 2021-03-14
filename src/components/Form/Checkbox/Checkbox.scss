@@ -1,0 +1,27 @@
+$grey: #CCCCCC;
+
+.checkBox {
+  display: none;
+
+  // 체크박스 커스텀 스타일링: 체크 안됐을 때
+  & + label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $grey;
+    border-radius: 0;
+    cursor: pointer;
+    box-shadow:
+      inset 2px 2px 5px 0 $grey,
+      1px 3px 5px 0 $grey;
+
+  }
+
+  // 체크박스 커스텀 스타일링: 체크 됐을 때
+  &:checked + label {
+    background-image: url('../../../assets/ckbox/check-solid.svg');
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}

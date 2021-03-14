@@ -1,14 +1,15 @@
 import React from 'react';
 import Icon from '../../UI/Icon/Icon';
 import Input from '../Input/Input';
-// import './SignInInput.scss';
+import '../Input/Input.scss';
 
 export default function SignInInput({ type, state, visible, hasError }) {
   // type: email, password
   // state: normal, inputed
   // visible: Default, true
   // hasError: Default, true
-  let contents = 'state와 hasError에 따른 에러메시지 처리';
+  let contents = '';
+  // state와 hasError에 따른 에러메시지 처리
 
   if (hasError === 'true') {
     if (type === 'password' && state === 'normal') contents = '비밀번호를 입력해주세요.';
