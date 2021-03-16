@@ -3,18 +3,45 @@ import Logo from '../components/UI/Logo/Logo';
 import SignInInput from '../components/Form/SignInInput/SignInInput';
 import AutoSignInCheckBox from '../components/Form/AutoSignInCheckBox/AutoSignInCheckBox';
 import Button from '../components/Form/Button/Button';
+import './Login.scss';
 
 export default class Login extends Component {
   render() {
     return (
-      <>
-      {/* 폴더 구조가 확실하지 않으니..
-      우선은 index.js에 import 해서 작업하기 */}
-      {/* 전체 구조 마크업 및 레이아웃 구성 */}
-        <Logo
-          type="Color"
-        />
-      </>
+      <div className="login__wrapper">
+        <header className="login__header">
+          <h1 className="login__logo">
+            <a href="http://www.coupang.com/">
+              <Logo type="Color" />
+            </a>
+          </h1>
+        </header>
+        <div className="login__main">
+          <form action="#" className="login__form" method="post">
+            <ul className="login__input-list">
+              <li className="login__input-item">
+                <SignInInput
+                  type="email"
+                  state="normal"
+                  visible="Default"
+                  hasError="Default"
+                />
+              </li>
+              <li className="login__input-item">
+                <SignInInput
+                  type="password"
+                  state="normal"
+                  visible="Default"
+                  hasError="Default"
+                />
+              </li>
+            </ul>
+          </form>
+        </div>
+        <footer className="login__footer">
+        </footer>
+      </div>
+      // 작성 완료 후 스토리에 필요한 argTypes 마저 입력하기
     );
   }
 }

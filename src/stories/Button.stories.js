@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button } from './Button';
 
+/*
 export default {
   title: 'Example/Button',
   component: Button,
@@ -34,3 +35,4 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+*/

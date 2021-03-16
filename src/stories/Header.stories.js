@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Header } from './Header';
 
+/*
 export default {
   title: 'Example/Header',
   component: Header,
@@ -16,3 +17,4 @@ LoggedIn.args = {
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {};
+*/

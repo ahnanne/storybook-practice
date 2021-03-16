@@ -1,0 +1,33 @@
+.login__wrapper {
+  background-color: blanchedalmond;
+  width: 460px;
+  max-width: 460px;
+  min-width: 290px;
+  margin: 0 auto;
+}
+
+.login__logo {
+  display: block;
+  margin: 0 auto;
+  padding: 46px 0 0;
+  width: 246px;
+}
+
+// email, pw common
+.login__input-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+
+  .login__input-item {
+    width: 458px;
+
+    .signin-input-container {
+      width: 458px;
+    }
+
+    .input-container {
+      width: 458px;
+    }
+  }
+}
