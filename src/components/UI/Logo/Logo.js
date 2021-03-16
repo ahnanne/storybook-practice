@@ -25,6 +25,9 @@ export default function Logo({ type, ...restProps }) {
     case 'Mono':
       Comp = LogoMono;
       break;
+    case 'Color':
+      Comp = LogoColor;
+      break;
     default:
       Comp = LogoColor;
   }

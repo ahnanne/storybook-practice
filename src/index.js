@@ -4,11 +4,11 @@ import { StrictMode } from 'react'
 import { render } from 'react-dom'
 import './styles/index.scss'
 
-import App from './app/App'
+import Login from './pages/Login'
 
 render(
   <StrictMode>
-    <App />
+    <Login />
   </StrictMode>,
   document.getElementById('root')
 )

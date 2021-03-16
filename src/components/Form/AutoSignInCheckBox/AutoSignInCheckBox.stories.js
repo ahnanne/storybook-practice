@@ -1,7 +1,7 @@
 import AutoSignInCheckBox from './AutoSignInCheckBox';
 
 export default {
-  title: 'Form/AutoSignInCheckBox.stories.js',
+  title: 'Form/AutoSignInCheckBox',
   component: AutoSignInCheckBox,
 }
 
