@@ -22,11 +22,7 @@ export default {
     // },
     visible: {
       description: '비밀번호 입력 시 숨김 여부(기본값: 숨김)',
-      defaultValue: 'Default',
-      control: {
-        type: 'select',
-        options: ['Default', 'true'],
-      },
+      defaultValue: false,
     },
     id: {
       description: '상위로부터 추가로 전달받은 id',
@@ -50,7 +46,7 @@ const Template = (args) => <Input {...args} />
 export const Primary = Template.bind({});
 Primary.args = {
   type: 'email',
-  visible: 'Default',
+  visible: false,
   id: '',
   className: '',
 };

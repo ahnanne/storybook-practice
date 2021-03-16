@@ -3,10 +3,10 @@ import Icon from '../../UI/Icon/Icon';
 import Input from '../Input/Input';
 import '../Input/Input.scss';
 
-export default function SignInInput({ type, state, visible, hasError }) {
+export default function SignInInput({ type, state, visible, hasError, method }) {
   // type: email, password
   // state: normal, inputed
-  // visible: Default, true
+  // visible: false, true
   // hasError: Default, true
   let contents = '';
   // state와 hasError에 따른 에러메시지 처리
@@ -29,6 +29,7 @@ export default function SignInInput({ type, state, visible, hasError }) {
           id={`signin${type.charAt(0).toUpperCase() + type.slice(1)}`}
           // 첫 글자만 대문자
           className={`signin-${type}`}
+          method={method}
         />
         <Icon
           shape={type === "email" ? "letter" : "lock"}

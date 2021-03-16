@@ -6,7 +6,25 @@ import Button from '../components/Form/Button/Button';
 import './Login.scss';
 
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      state: "normal",
+      visible: false,
+      hasError: "Default",
+    }
+  }
+
+  changeVisibility = () => {
+    this.setState((prevState) => ({
+      ...prevState,
+      visible: !this.state.visible,
+    }))
+  };
+
   render() {
+    const { state, visible, hasError } = this.state;
+
     return (
       <div className="login__wrapper">
         <header className="login__header">
@@ -22,17 +40,18 @@ export default class Login extends Component {
               <li className="login__input-item">
                 <SignInInput
                   type="email"
-                  state="normal"
-                  visible="Default"
-                  hasError="Default"
+                  state={state}
+                  visible={false}
+                  hasError={hasError}
                 />
               </li>
               <li className="login__input-item">
                 <SignInInput
                   type="password"
-                  state="normal"
-                  visible="Default"
-                  hasError="Default"
+                  state={state}
+                  visible={visible}
+                  hasError={hasError}
+                  method={this.changeVisibility}
                 />
               </li>
             </ul>

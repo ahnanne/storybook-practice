@@ -19,15 +19,9 @@
   padding-left: 0;
   margin: 0 auto;
 
-  .login__input-item {
+  .login__input-item, 
+  .signin-input-container, 
+  .input-container {
     width: 458px;
-
-    .signin-input-container {
-      width: 458px;
-    }
-
-    .input-container {
-      width: 458px;
-    }
   }
 }
