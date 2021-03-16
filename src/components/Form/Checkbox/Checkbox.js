@@ -1,14 +1,14 @@
 import React from 'react';
 import './Checkbox.scss';
 
-export default function Checkbox({ ckId, checked, updateCheckedState, disabled, children }) {
+export default function Checkbox({ ckId, checked, disabled, method, children }) {
   return (
     <>
       <input
         type="checkbox"
         id={`ck${ckId}`}
         className="checkBox {ckId}"
-        onClick={updateCheckedState}
+        onClick={method}
         checked={checked}
         disabled={disabled}
       />

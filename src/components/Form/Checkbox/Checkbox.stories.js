@@ -25,9 +25,12 @@ export default {
         type: 'boolean',
       },
     },
-    label: {
-      description: '체크박스 label',
+    children: {
+      description: '체크박스 label 내용',
       defaultValue: '',
+    },
+    method: {
+      description: '체크박스 상태 관련 메서드'
     },
   },
 }
@@ -35,9 +38,11 @@ export default {
 const Template = (args) => <Checkbox {...args} />
 
 export const Primary = Template.bind({});
+/*
 Primary.args = {
   ckId: 0,
   checked: false,
   disabled: false,
-  label: '',
+  children: '',
 };
+*/

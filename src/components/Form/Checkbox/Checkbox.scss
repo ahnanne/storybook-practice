@@ -12,8 +12,8 @@ $grey: #CCCCCC;
     border-radius: 0;
     cursor: pointer;
     box-shadow:
-      inset 2px 2px 5px 0 $grey,
-      1px 3px 5px 0 $grey;
+      inset -1px 1px 2px 1px rgba(197, 197, 197, 0.2),
+      1px 0 2px 1px rgba(197, 197, 197, 0.2);
     white-space: nowrap;
     background-image: url('../../../assets/ckbox/check-solid.svg');
     background-size: 18px;

@@ -1,9 +1,16 @@
+$blue: #0074E9;
+$darkgrey: #555555;
+
 .login__wrapper {
-  background-color: blanchedalmond;
   width: 460px;
   max-width: 460px;
   min-width: 290px;
   margin: 0 auto;
+
+  header {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .login__logo {
@@ -11,17 +18,69 @@
   margin: 0 auto;
   padding: 46px 0 0;
   width: 246px;
+
+  a {
+    display: block;
+    height: 56px;
+  }
 }
 
 // email, pw common
 .login__input-list {
   list-style: none;
   padding-left: 0;
-  margin: 0 auto;
+  margin: 32px auto 0;
 
   .login__input-item, 
   .signin-input-container, 
   .input-container {
     width: 458px;
+  }
+
+  .signin-input-container {
+    // margin collapse
+    margin-top: 16px;
+  }
+}
+
+.login__submenu {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  
+  .login__findInfo > a {
+    text-decoration-line: none;
+    font-size: 14px;
+    color: $blue;
+
+    .login__findInfo-chevron {
+      width: 10px;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+  }
+}
+
+.login__button-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 14px 0 20px;
+
+  button {
+    margin: 22px 0;
+    width: 100%;
+  }
+}
+
+.login__footer {
+  text-align: center;
+
+  small {
+    font-size: 12px;
+    color: $darkgrey;
   }
 }

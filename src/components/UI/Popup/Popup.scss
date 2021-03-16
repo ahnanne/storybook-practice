@@ -9,7 +9,7 @@ $bgGrey: #f4f4f4;
     position: absolute;
     box-sizing: border-box;
     min-width: 36px;
-    max-width: 275px;
+    // max-width: 275px;
     font-size: 12px;
     letter-spacing: -1px;
     line-height: 1;
@@ -17,6 +17,7 @@ $bgGrey: #f4f4f4;
     padding: 9px 6px;
     background-color: $bgGrey;
     opacity: 1;
+    white-space: nowrap;
   }
 
   // 말풍선 화살표 모양
