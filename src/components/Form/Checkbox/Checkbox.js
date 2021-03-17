@@ -7,7 +7,7 @@ export default function Checkbox({ ckId, checked, disabled, method, children }) 
       <input
         type="checkbox"
         id={`ck${ckId}`}
-        className="checkBox {ckId}"
+        className={`checkBox checkBox${ckId}`}
         onClick={method}
         checked={checked}
         disabled={disabled}
