@@ -12,12 +12,16 @@ export default class Login extends Component {
     super(props);
     this.state = {
       inputState: {
-        state: "normal",
+        state: 'normal',
         visible: false,
         hasError: {
-          email: "Default",
-          password: "Default",
+          email: 'Default',
+          password: 'Default',
         },
+        inputContent: {
+          email: '',
+          password: '',
+        }
       },
       autoSignin: {
         checked: false,
@@ -48,8 +52,7 @@ export default class Login extends Component {
 
   render() {
     // input state
-    const { state, visible } = this.state.inputState;
-    const { email, password } = this.state.inputState.hasError;
+    const { state, visible, hasError, inputContent } = this.state.inputState;
     // checkbox state
     const { checked, disabled } = this.state.autoSignin;
 
@@ -70,7 +73,19 @@ export default class Login extends Component {
                   type="email"
                   state={state}
                   visible={false}
-                  hasError={email}
+                  hasError={hasError.email}
+                  onChange={e => {
+                    this.setState((prevState) => ({
+                      ...prevState,
+                      inputState: {
+                        ...prevState.inputState,
+                        inputContent: {
+                          ...prevState.inputState.inputContent,
+                          email: e.target.value,
+                        }
+                      }
+                    }));
+                  }}
                 />
               </li>
               <li className="login__input-item">
@@ -78,8 +93,45 @@ export default class Login extends Component {
                   type="password"
                   state={state}
                   visible={visible}
-                  hasError={password}
+                  hasError={hasError.password}
                   method={this.changeVisibility}
+                  onChange={e => {
+                    this.setState((prevState) => ({
+                      ...prevState,
+                      inputState: {
+                        ...prevState.inputState,
+                        inputContent: {
+                          ...prevState.inputState.inputContent,
+                          password: e.target.value,
+                        }
+                      }
+                    }));
+                  }}
+                  onBlur={e => {
+                    if (e.target.value === '') {
+                      this.setState((prevState) => ({
+                        ...prevState,
+                        inputState: {
+                          ...prevState.inputState,
+                          hasError: {
+                            ...prevState.inputState.hasError,
+                            password: 'true',
+                          }
+                        },
+                      }));
+                    } else {
+                      this.setState((prevState) => ({
+                        ...prevState,
+                        inputState: {
+                          ...prevState.inputState,
+                          hasError: {
+                            ...prevState.inputState.hasError,
+                            password: 'Default',
+                          }
+                        },
+                      }));
+                    }
+                  }}
                 />
               </li>
             </ul>
@@ -113,7 +165,7 @@ export default class Login extends Component {
       // 작성 완료 후 스토리에 필요한 argTypes 마저 입력하기
     );
   }
-
+  /*
   componentDidMount() {
     const signinPw = document.querySelector('.signin-password');
     const checkBox = document.querySelector('.checkBox0');
@@ -133,7 +185,6 @@ export default class Login extends Component {
       }
     });
   }
-
   componentDidUpdate() {
     const signinPw = document.querySelector('.signin-password');
 
@@ -163,4 +214,5 @@ export default class Login extends Component {
       }
     });
   }
+  */
 }

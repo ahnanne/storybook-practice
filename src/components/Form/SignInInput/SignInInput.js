@@ -3,7 +3,7 @@ import Icon from '../../UI/Icon/Icon';
 import Input from '../Input/Input';
 import '../Input/Input.scss';
 
-export default function SignInInput({ type, state, visible, hasError, method }) {
+export default function SignInInput({ type, state, visible, hasError, method, onChange, onBlur }) {
   // type: email, password
   // state: normal, inputed
   // visible: false, true
@@ -29,6 +29,8 @@ export default function SignInInput({ type, state, visible, hasError, method }) 
           id={`signin${type.charAt(0).toUpperCase() + type.slice(1)}`}
           // 첫 글자만 대문자
           className={`signin-${type}`}
+          onChange={onChange}
+          onBlur={onBlur}
           method={method}
         />
         <Icon
