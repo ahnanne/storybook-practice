@@ -9,6 +9,9 @@ export default function Input({ type, visible, id, className, method, onChange, 
   return (
     <div className="input-container">
       <input
+        name={type}
+        // input 양식 컨트롤의 이름.
+        // 이름/값 짝(name/value pair)의 일부로서 양식과 함께 전송된다
         type={type === "email" ? type : (visible ? "text" : type)}
         placeholder={type === "email" ? "아이디(이메일)" : "비밀번호"}
         id={`${id} ${type}Input`.trim()}

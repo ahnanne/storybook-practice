@@ -50,6 +50,37 @@ export default class Login extends Component {
     }));
   };
 
+  /** React form multiple control handle */
+  controlInput = e => {
+    const { name, value } = e.target;
+
+    this.setState((prevState) => ({
+      ...prevState,
+      inputState: {
+        ...prevState.inputState,
+        inputContent: {
+          ...prevState.inputState.inputContent,
+          [name]: value,
+        }
+      }
+    }));
+  };
+
+  isEmpty = e => {
+    const { name, value } = e.target;
+
+    this.setState((prevState) => ({
+      ...prevState,
+      inputState: {
+        ...prevState.inputState,
+        hasError: {
+          ...prevState.inputState.hasError,
+          [name]: value === '' ? 'true' : 'Default',
+        }
+      },
+    }));
+  }
+
   render() {
     // input state
     const { state, visible, hasError, inputContent } = this.state.inputState;
@@ -74,18 +105,8 @@ export default class Login extends Component {
                   state={state}
                   visible={false}
                   hasError={hasError.email}
-                  onChange={e => {
-                    this.setState((prevState) => ({
-                      ...prevState,
-                      inputState: {
-                        ...prevState.inputState,
-                        inputContent: {
-                          ...prevState.inputState.inputContent,
-                          email: e.target.value,
-                        }
-                      }
-                    }));
-                  }}
+                  onChange={this.controlInput}
+                  onBlur={this.isEmpty}
                 />
               </li>
               <li className="login__input-item">
@@ -95,43 +116,8 @@ export default class Login extends Component {
                   visible={visible}
                   hasError={hasError.password}
                   method={this.changeVisibility}
-                  onChange={e => {
-                    this.setState((prevState) => ({
-                      ...prevState,
-                      inputState: {
-                        ...prevState.inputState,
-                        inputContent: {
-                          ...prevState.inputState.inputContent,
-                          password: e.target.value,
-                        }
-                      }
-                    }));
-                  }}
-                  onBlur={e => {
-                    if (e.target.value === '') {
-                      this.setState((prevState) => ({
-                        ...prevState,
-                        inputState: {
-                          ...prevState.inputState,
-                          hasError: {
-                            ...prevState.inputState.hasError,
-                            password: 'true',
-                          }
-                        },
-                      }));
-                    } else {
-                      this.setState((prevState) => ({
-                        ...prevState,
-                        inputState: {
-                          ...prevState.inputState,
-                          hasError: {
-                            ...prevState.inputState.hasError,
-                            password: 'Default',
-                          }
-                        },
-                      }));
-                    }
-                  }}
+                  onChange={this.controlInput}
+                  onBlur={this.isEmpty}
                 />
               </li>
             </ul>
