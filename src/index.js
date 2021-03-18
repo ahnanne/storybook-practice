@@ -47,9 +47,9 @@ import Counter from 'components/Counter/Counter';
 
 render(
   <StrictMode>
-    {/* <Login /> */}
+    <Login />
     {/* <Parent /> */}
-    <Counter />
+    {/* <Counter /> */}
   </StrictMode>,
   document.getElementById('root')
 )
