@@ -5,10 +5,12 @@ import { render } from 'react-dom'
 import './styles/index.scss'
 
 import Login from './pages/Login'
+import Copyright from 'components/Copyright/Copyright'
 
 render(
   <StrictMode>
-    <Login />
+    {/* <Login /> */}
+    <Copyright />
   </StrictMode>,
   document.getElementById('root')
 )

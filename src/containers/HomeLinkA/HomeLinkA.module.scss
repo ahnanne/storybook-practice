@@ -1,0 +1,18 @@
+.heading {
+
+}
+
+.a {
+  text-decoration: none;
+  color: inherit;
+
+  svg {
+    // 이벤트 위임에서 문제될 때가 간혹 있음!
+    // i 요소 등에서도 마찬가지의 문제가 있으므로 아래 속성 이용하면 됨.
+    pointer-events: none;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
