@@ -3,10 +3,9 @@ import Copyright from '../Copyright/Copyright';
 import Checkbox from '../Form/Checkbox/_Checkbox.function';
 
 export default class Parent extends Component {
-  constructor() {
-    super();
-    console.log(this);
-  }
+  /** 인스턴스 메서드
+   * 결국, 클래스 필드로 정의한 메서드는
+   * constructor 안에서 정의된 메서드와 같다고 볼 수 있음. */
   state = {
     visibility: false,
   };
@@ -20,6 +19,7 @@ export default class Parent extends Component {
     console.log(this);
   };
 
+  /** 프로토타입 메서드 */
   changeVisibility() {
     console.log('프로토타입 메서드에서의 this');
     console.log(this);
@@ -31,6 +31,11 @@ export default class Parent extends Component {
   render() {
     console.log(this.checkThisOut());
     console.log(this.checkThisOutToo());
+    /**
+     *  this가 가리키는 값 다음으로 콘솔창에 찍히는 undefined는
+     *  이 함수들이 값을 반환하지 않고 있어서(즉, return문이 없어서)
+     *  undefined가 반환되는 것임.
+     */
 
     return (
       <>

@@ -10,7 +10,7 @@ import Login from './pages/Login'
 // import Checkbox from 'components/Form/Checkbox/_Checkbox.class';
 import Checkbox from 'components/Form/Checkbox/_Checkbox.function';
 import Copyright from 'components/Copyright/Copyright'
-import Counter from 'components/Counter/Counter';
+import Counter from 'components/Counter/_Counter';
 
 // 부모(상위) 컴포넌트 정의
 // 함수도 [ 상태를 관리 ] 할 수 있다.
@@ -47,9 +47,9 @@ import Counter from 'components/Counter/Counter';
 
 render(
   <StrictMode>
-    <Login />
+    {/* <Login /> */}
     {/* <Parent /> */}
-    {/* <Counter /> */}
+    <Counter />
   </StrictMode>,
   document.getElementById('root')
 )
