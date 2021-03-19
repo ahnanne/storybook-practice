@@ -10,45 +10,33 @@ import Login from './pages/Login'
 // import Checkbox from 'components/Form/Checkbox/_Checkbox.class';
 import Checkbox from 'components/Form/Checkbox/_Checkbox.function';
 import Copyright from 'components/Copyright/Copyright'
-import Counter from 'components/Counter/_Counter';
+import Counter from 'components/Counter/_Counter.function';
 
-// 부모(상위) 컴포넌트 정의
-// 함수도 [ 상태를 관리 ] 할 수 있다.
-// 상태(state)
-// React Hook의 이름 규칙 => use
-// (cf. HOC의 이름 규칙 => with)
-
-// useState 훅은 React 함수 컴포넌트 안에서 사용할 수 있다.
-// const Parent = () => {
-//   /**
-//    * 함수 컴포넌트 안에서 가시성 상태 관리
-//    */
-//   const [visibility, setVisibility] = React.useState(false);
-//   // setVisibility도 하위 컴포넌트에게 전달함으로써
-//   // 상태를 변경할 권한을 부여함.
-
-//   const onChecked = () => {
-//     setVisibility((prevState) => !prevState);
-//   }
-
-//   return (
-//     <>
-//       <Checkbox
-//         id="check-sdgasdg"
-//         label="라이선스 표시/감춤"
-//         checked={visibility}
-//         onChecked={onChecked}
-//       />
-//       { visibility ? <Copyright /> : null }
-//       {/* 또는 { visibility ?? <Copyright /> } */}
-//     </>
-//   );
-// };
+/**
+const App = () => {
+  return (
+    <Counter>
+      <Counter.Control // Counter 객체의 Control 프로퍼티가 결국은 또 다른 하위 컴포넌트라는 것!
+        label="decrement count"
+        onUpdate={this.setCount.bind(this)}
+        // step={1} -> CounterControl 컴포넌트에 default value 있으므로 생략 가능
+      >감소</Counter.Control>
+      <Counter.Display>{this.state.count}</Counter.Display>
+      <Counter.Control
+        label="increment count"
+        onUpdate={this.setCount.bind(this)}
+        step={2}
+      >증가</Counter.Control>
+    </Counter>
+  );
+};
+*/
 
 render(
   <StrictMode>
     {/* <Login /> */}
     {/* <Parent /> */}
+    {/* count의 초기값, 증가값, 감소값을 설정하고 싶을 때!? */}
     <Counter />
   </StrictMode>,
   document.getElementById('root')

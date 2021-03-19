@@ -3,6 +3,9 @@ import CounterDisplay from './_CounterDisplay';
 import CounterControl from './_CounterControl';
 
 /* -------------------- Compound Components ------------------------------- */
+/**
+ * Compound Comp의 장점 : props, callback 전달 과정 간소화
+ */
 
 export default class Counter extends Component {
   /** 화살표 함수로 정의할 경우 익명 함수
